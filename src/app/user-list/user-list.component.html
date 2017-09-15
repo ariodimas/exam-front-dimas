@@ -1,0 +1,24 @@
+<!-- <header class="header">
+  <div class="headline">
+      <div class="container">
+          <button type="button" class="btn btn-default" (click)="GetUser()">Get User</button>
+      </div>
+  </div>
+</header> -->
+
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Company</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let u of servis.UserList">
+    <td>{{ u.name }}</td>
+    <td>{{ u.email }}</td>
+    <td>{{ u.address }}</td>
+    <td>{{ u.company }}</td>
+    <td><button type="button" class="btn btn-default" (click)="Remove(u.id)">Remove</button></td>
+  </tr>
+</table>
