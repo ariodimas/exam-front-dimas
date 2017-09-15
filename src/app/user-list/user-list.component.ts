@@ -11,7 +11,7 @@ export class UserListComponent implements OnInit {
   constructor(private servis:APIServiceService) { }
 
   ngOnInit() {
-    this.servis.GetAllUser();
+    // this.servis.GetAllUser();
   }
 Remove(a){
   this.servis.RemoveData(a)

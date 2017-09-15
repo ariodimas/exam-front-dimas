@@ -10,7 +10,19 @@ export class AddUserComponent implements OnInit {
 
   constructor(private servis:APIServiceService) { }
 
+  NewUser = {
+    "id" : Number,
+    "name" : "",
+    "email" : "",
+    "address" : "",
+    "phone" : "",
+  }
+
   ngOnInit() {
   }
 
+  AddUser(){
+    this.NewUser["id"]=this.servis.UserList[this.servis.UserList.length-1]["id"]+1;
+    this.servis.UserList.push(this.NewUser)
+  }
 }
